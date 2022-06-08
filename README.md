@@ -71,6 +71,6 @@ Instalations
 
 
 
- ![img](assets\team-generator_nodePrompt_screenShot.jpg "node prompt image")
+ <!-- ![img](assets\team-generator_nodePrompt_screenShot.jpg "node prompt image")
  ![img](assets\team-generator_GeneratedLivePage_screenShot.jpg "generated live page image")
- ![img](assets\team-generator_runAndPassTests_screenShot.jpg "running tests image")
+ ![img](assets\team-generator_runAndPassTests_screenShot.jpg "running tests image") -->
