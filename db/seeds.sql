@@ -15,7 +15,7 @@ CREATE TABLE Threads (
   body mediumtext,
   PRIMARY KEY (id),
   KEY user_id (user_id),
-  CONSTRAINT threads_ibfk_1 FOREIGN KEY (`user_id`) REFERENCES `Users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+  CONSTRAINT threads_ibfk_1 FOREIGN KEY (user_id) REFERENCES Users (id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE Replies (
@@ -26,6 +26,6 @@ CREATE TABLE Replies (
   PRIMARY KEY (id),
   KEY user_id (user_id),
   KEY thread_id (thread_id),
-  CONSTRAINT replies_ibfk_1 FOREIGN KEY (`user_id`) REFERENCES `Users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT replies_ibfk_2 FOREIGN KEY (`thread_id`) REFERENCES `Threads` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+  CONSTRAINT replies_ibfk_1 FOREIGN KEY (user_id) REFERENCES Users (id) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT replies_ibfk_2 FOREIGN KEY (thread_id) REFERENCES `Threads` (id) ON DELETE CASCADE ON UPDATE CASCADE
 );
