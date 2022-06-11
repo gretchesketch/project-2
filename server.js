@@ -16,6 +16,16 @@ app.use(express.json());
 app.use(express.urlencoded({ extended : false }));
 
 
+
+//route to login page
+app.get("/login",(req,res)=>{
+    res.sendFile(path.join(__dirname,"./login.html"))
+})
+
+app.get("/register",(req,res)=>{
+    res.sendFile(path.join(__dirname,"./register.html"))
+})
+
 // create
 app.post('/insert', (request, response) => {
     const { name } = request.body;

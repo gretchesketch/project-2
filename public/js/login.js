@@ -50,4 +50,7 @@ document
 
 document
   .querySelector('.signup-form')
-  .addEventListener('submit', signupFormHandler);
+  .addEventListener('submit', signupFormHandler);document.getElementsByClassName("register").addEventListener("click",(e)=>{
+    e.preventDefault()
+    alert("User logged in")
+})
