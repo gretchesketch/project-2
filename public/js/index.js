@@ -137,3 +137,15 @@ function loadHTMLTable(data) {
 
     table.innerHTML = tableHtml;
 }
+//For Search Box//
+let navbar= document.querySelector(".navbar");
+let searchBox= document.querySelector(".search-box .bx-search-alt");
+// <i class='bx bxs-x-square' ></i>
+searchBox.addEventListener("click", ()=>{
+    navbar.classList.toggle("showInput");
+    if(navbar.classList.contains("showInput")){
+        searchBox.classList.replace("bx-search" ,"bxs-x-square")
+    }else {
+        searchBox.classList.replace("bxs-x-square" ,"bx-search")
+    }
+})

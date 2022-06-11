@@ -4,38 +4,55 @@
         <meta chrset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
+        <!--Boxicons Link-->
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
         <title>crud app</title>
     </head>
     <header><h1>DOOD</h1></header>
     <body>
         <main>
-            <label>Name:</label>
-            <input type="text" id="name-input">
-            <button id="add-name-btn">Add Name</button>
-
-            <br><br>
-
-            <div>
-                <input placehold="search by name"
-                id="search-input">
-                <button id="search-btn">Search</button>
-            </div>
-
-            <table id="table">
-                <thead>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Date Added</th>
-                    <th>Delete</th>
-                    <th>Edit</th>
-                </thead>
-                <tbody></tbody>
-            </table>
+            <!--Reponsive Drop Down Menu-->
+            <nav>
+                <div class="navbar">
+                    <div class="logo"><a href="#">DOOD</a></div>
+                    <div class="nav-links">
+                        <ul class="links">
+                            <li><a href="#">Placeholder</a></li>
+                            <li>
+                                <a href="#">Placeholder</a>
+                                <i class='bx bxs-chevrons-down arrow placeholder1'></i>
+                                <ul class="placeholder1-sub-menu sub-menu">
+                                    <li><a href="#">placeholder</a></li>
+                                    <li><a href="#">placeholder</a></li>
+                                    <li><a href="#">placeholder</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Placeholder</a>
+                                <i class='bx bxs-chevrons-down arrow placeholder2'></i>
+                                <ul class="placeholder2-sub-menu sub-menu">
+                                    <li><a href="#">placeholder</a></li>
+                                    <li><a href="#">placeholder</a></li>
+                                    <li><a href="#">placeholder</a></li>      
+                                </ul>
+                            </li>
+                            <li><a href="#">ABOUT US</a></li>
+                            <li><a href="#">CONTACT US</a></li>
+                        </ul>       
+                    </div>
+                    <!--Search Box-->
+                    <div class="search-box">
+                        <i class='bx bx-search-alt' ></i>
+                        <div class="input-box">
+                            <input type="text" placeholder="Search for Games">
+                        </div>
+                    </div>
+                </div>
+            </nav>
         </main>
     <script src="index.js"></script>
     </body>
     <footer><h3>CREATED BY: Gretchen, David, & Jonathan</h3>
     <h5>Last Updated: June 2022</h5>
     </footer>
-
 </html>

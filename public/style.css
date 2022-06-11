@@ -1,0 +1,163 @@
+/* Google Fonts CDN Link*/
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  box-sizing: border-box;
+  font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: #74569b;
+  box-shadow: 0 1px 2 px rgba(0, 0, 0, 0.2);
+}
+
+nav .navbar{
+  height: 100%;
+  max-width: 1250px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+nav .navbar .logo .a{
+color: #ffb3cb;
+font-size: 30px;
+font-weight: 600;
+text-decoration: none;
+}
+
+nav .navbar .nav-links{
+  height: 100%
+  line-height: 70px;
+}
+
+nav .navbar .nav-links .links{
+  display:flex;
+}
+
+nav .navbar .nav-links .links li{
+  position: relative;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding: 0 14px;
+}
+
+nav .navbar .nav-links .links li a{
+  height: 100%;
+  color:#ffb3cb;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+nav .navbar .nav-links .links li .arrow{
+  height: 100%;
+  width: 22px;
+  text-align: center;
+  color: #ffb3cb;
+  line-height: 70px;
+  transition: all 0.3s ease;
+}
+
+.navbar .nav-links .links li:hover .placeholder1,
+.navbar .nav-links .links li:hover .placeholder2{
+  transform: rotate(180deg);
+}
+
+.navbar .nav-links .links .sub-menu{
+  position:absolute;
+  top: 70px;
+  left: 0;
+  background: #74569b;
+  line-height: 40px;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 1px 2 px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+
+.navbar .nav-links .links .sub-menu li{
+  padding: 0 22px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar .nav-links .links .sub-menu li a{
+  font-size: 15px;
+  font: 500;
+} 
+
+.navbar .nav-links .links li:hover .placeholder1-sub-menu,
+.navbar .nav-links .links li:hover .placeholder2-sub-menu{
+  display: block;
+}
+
+.navbar .search-box{
+  position: relative;
+  height: 40px;
+  width: 40px;
+  background: #74569b;
+}
+
+.navbar .search-box .bx-search-alt{
+  color: #f7ffae;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  line-height: 40px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.navbar .search-box .input-box{
+  height: 60px;
+  width: 300px;
+  background: #f7ffae;
+  position: absolute;
+  top: 80px;
+  right: calc(100% - 40px);
+  border-radius: 6px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.navbar .showInput .search-box .input-box{
+  opacity: 1;
+  pointer-events: auto;
+  top: 65px;
+}
+
+.navbar .search-box .input-box::before{
+content: '' ;
+position: absolute;
+height: 20px;
+width: 20px;
+background-color: #74569b;
+right: 10px;
+top: -6px;
+transform: rotate(45deg);
+}
+
+.navbar .search-box .input-box input{
+  position: absolute;
+  height: 35px;
+  width: 280px;
+  z-index: 98;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  padding: 0 15px;
+  font-size: 16px;
+}
