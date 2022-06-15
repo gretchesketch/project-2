@@ -38,6 +38,18 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(controllers);
 
+
+// app.get('/search/:name', (request, response) => {
+//     const { name } = request.params;
+//     const db = dbService.getDbServiceInstance();
+
+//     const result = db.searchByName(name);
+    
+//     result
+//     .then(data => response.json({data : data}))
+//     .catch(err => console.log(err));
+// })
+
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
