@@ -44,7 +44,6 @@ app.use(controllers);
 //     const db = dbService.getDbServiceInstance();
 
 //     const result = db.searchByName(name);
-    
 //     result
 //     .then(data => response.json({data : data}))
 //     .catch(err => console.log(err));
