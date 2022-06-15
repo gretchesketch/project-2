@@ -1,14 +1,17 @@
 [
   {
-    "title": "Music Near Me",
-    "content": "A mobile app that will send you notifications whenever a concert is playing in your area."
+    "videogame": "Fallout",
+    "console": "playstation",
+    "content": "really cool post apocalyptic story. The open world quality is amazing."
   },
   {
-    "title": "The Ultimate Tech Quiz",
-    "content": "A web app that will give users 10 new technical questions each day and track their progress in things like programming, cybersecurity, database architecture, and more!"
+    "videogame": "Dark Souls III",
+    "console": "playstation",
+    "content": "incredible lore, extremely hard. Good thing I love a challenge"
   },
   {
-    "title": "Roll 'Em Up",
-    "content": "A game for Windows and macOS where players move a ball through a series of increasingly challenging mazes."
+    "videogame": "Pokemon Unite",
+    "console": "Switch",
+    "content": "Extremly fun to play, but kind of feels like a phone game."
   }
 ]

@@ -3,12 +3,12 @@ const postId= window.location.pathname.split('/')[2]
 const editPostHandler = async (evt)=> {
     console.log('Saved Clicked')
     evt.preventDefault();
-    const title = document.querySelector('#edit-post-title').value 
+    const videogame = document.querySelector('#edit-post-videogame').value 
     const body = document.querySelector('#edit-post-textarea').value;
     await fetch(`/api/posts/edit/${postId}`,{
         method: 'POST',
         body: JSON.stringify({
-            title,
+            videogame,
             body,
             postId
         }),
