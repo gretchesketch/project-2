@@ -59,7 +59,8 @@ Dependencies
  Troubleshooting
 ----------------------------------------------------------------------------------------
 
-* 
+* insmonia: to check that the back end was working.
+* mysql workbench: to check that the data was being stored in the database.
 
 
 
@@ -68,6 +69,13 @@ Dependencies
 ----------------------------------------------------------------------------------------
  
  * Gretchen Jensen : https://github.com/gretchesketch
+    -
+
+ * David Cho : https://github.com/Aphalion13
+    -
+
+ * Jonathan Swann : https://github.com/JS19191898
+    -
 
 
 
