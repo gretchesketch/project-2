@@ -1,16 +1,32 @@
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>DOOD</title>
+    <link rel="stylesheet" href="C:\Users\gretc\Documents\GATechHW\project-2\public\css\style.css"/>
+    <link
+      href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css'
+      rel='stylesheet'
+      integrity='sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor'
+      crossorigin='anonymous'
+    />
+  </head>
+
+
 <div class='row'>
   <div class='card'>
-    <div class='card-header'>{{title}}</div>
+    <div class='card-header'>{{blog.title}}</div>
     <div class='card-body'>
       <p class='card-text'>
-        {{content}}
+        {{blog.content}}
       </p>
     </div>
     <div class='card-footer text-muted'>
       Posted by
-      {{user.username}}
+      {{blog.user.username}}
       on
-      {{createdAt}}
+      {{blog.createdAt}}
     </div>
   </div>
 </div>
@@ -18,11 +34,11 @@
 <div class='row'>
   <form id='comment-form'>
     <textarea id='comment-text-area'></textarea>
-    <button id='comment-submit' data-id='{{id}}'>Submit Comment</button>
+    <button id='comment-submit' data-id='{{blog.id}}'>Submit Comment</button>
   </form>
 </div>
 
-{{#each comments as |comment|}}
+{{#each blog.Comments as |comment|}}
   <div class='row'>
     <div class='card'>
       <div class='card-body'>
@@ -37,6 +53,3 @@
     </div>
   </div>
 {{/each}}
-© 2022 GitHub, Inc.
-Terms
-P

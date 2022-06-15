@@ -11,7 +11,8 @@ Post.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    title: DataTypes.STRING,
+    videogame: DataTypes.STRING,
+    console:  DataTypes.STRING,
     content: DataTypes.STRING,
   },
   {

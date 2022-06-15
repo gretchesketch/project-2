@@ -1,3 +1,7 @@
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+
 body {
   background-color: #EFDDC9;
 }
@@ -6,6 +10,9 @@ main {
   width:100%;
   margin: 50px auto;
   text-align: center;
+  /* this will keep the footer at the bottom of the page */
+  /* its 100% of the view port minus the box of the footer and the box of the header */
+  /* min-height: calc(100vh - ); */
 }
 
 header {
@@ -14,18 +21,6 @@ header {
   color: #404674;
 }
 
-table {
-  margin: 50px auto;
-}
-
-table, th, td {
-  border-collapse: collapse;
-  border: 1px solid #000;
-}
-
-th,td {
-  padding: 5px;
-}
 
 footer {
   text-align: center;
