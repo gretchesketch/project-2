@@ -38,6 +38,7 @@ This project used the following:
  * sequelize
  * cors
  * session
+ * npm install multer express morgan --save
  * schemecolor.com: retro gamer
 
 
@@ -52,6 +53,7 @@ Dependencies
  * sequelize
  * uuid
  * session
+ * multer
 
 
  Troubleshooting
