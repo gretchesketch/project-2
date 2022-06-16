@@ -7,12 +7,12 @@
   <!--Boxicons Link-->
   <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
   <title>DOOD</title>
-  {{#each css}}
-        <link rel="stylesheet" href="public/css/style.css"{{style.css}}>
-    {{/each}}
+        <link rel="stylesheet" href="/css/style.css"{{style.css}}>
+
 </head>
 
 <body>
+  <img src="https://cdn2.unrealengine.com/Diesel%2Fblog%2Fepic-games-store-update%2FEGS_Social_Update_News-2560x1440-128a69890d92407b815582c1deba54450e5645f9.jpg" alt="games">
   <header>
     <nav class='navbar navbar-expand-lg bg-light'>
       <div class='container-fluid'>
@@ -29,6 +29,12 @@
             <li class='nav-item'>
               <a class='nav-link' href='/dashboard'>Profile</a>
             </li>
+            <li class='nav-item'>
+              <a href='#'>About Us</a>
+            </li>
+            <li class='nav-item'>
+              <a href='#'>Contact Us</a>
+            </li>
             {{#if logged_in}}
             <li class='nav-item'>
               <a class='nav-link logout' id="logout" href='/'>Logout</a>
@@ -38,17 +44,6 @@
               <a class='nav-link' href='/login'>Login</a>
             </li>
             {{/if}}
-            <li>
-                <a href="#">Placeholder</a>
-                <i class='bx bxs-chevrons-down arrow placeholder2'></i>
-                <ul class="placeholder2-sub-menu sub-menu">
-                <li><a href="#">placeholder</a></li>
-                <li><a href="#">placeholder</a></li>
-                <li><a href="#">placeholder</a></li>
-                </ul>
-            </li>
-            <li><a href="#">ABOUT US</a></li>
-            <li><a href="#">CONTACT US</a></li>
           </ul>
         </div>
         <!--Search Box-->
@@ -64,7 +59,7 @@
   <main>
     <div class='container'>
       {{{body}}}
-    </div>
+    </div>  
   </main>
   {{#if logged_in}}
   <script src="/js/logout.js"></script>

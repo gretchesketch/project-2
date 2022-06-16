@@ -19,6 +19,7 @@ header {
 
 /* Style the container with a rounded border, grey background and some padding and margin */
 .container {
+  width: 100%;
   border: 2px solid #ccc;
   background-color: #eee;
   border-radius: 5px;
@@ -35,7 +36,7 @@ header {
 
 /* Float images inside the container to the left. Add a right margin, and style the image as a circle */
 .container img {
-  float: left;
+  float: center;
   margin-right: 20px;
   border-radius: 50%;
 }
@@ -104,3 +105,48 @@ body, html {
     float: right;
   }
 } 
+
+/*navbar*/
+
+.container {
+  float: left;
+  width: 30%;
+  margin-right: 2%;
+  height: 391px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.movie-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.5rem;
+  color: white;
+  z-index: 2;
+}
+
+.blog.user.username::before {
+  content: "Username";
+  display: block;
+  font-size: 0.5rem;
+  text-transform: uppercase;
+  color: #999;
+}
+
+.blog.user.username {
+  margin: 0;
+}
+
+.blog.videogame {
+  margin: 0 0 0.5rem 0;
+}
+.blog.videogame::before {
+  content: "Title";
+  display: block;
+  font-size: 0.5rem;
+  text-transform: uppercase;
+  color: #999;
+}

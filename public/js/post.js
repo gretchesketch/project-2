@@ -3,6 +3,7 @@ const newPostHandler = async (evt)=> {
   const videogame = document.querySelector('#create-post-videogame').value;
   const console = document.querySelector('#create-post-console').value;
   const content = document.querySelector('#create-post-content').value;
+  const gameImage = document.querySelector('#create-post-content').value;
   
   await fetch('/api/posts',{
       method: 'POST',
@@ -10,6 +11,7 @@ const newPostHandler = async (evt)=> {
           videogame,
           console,
           content,
+          gameImage
       }),
       headers: { 'Content-Type' : 'application/JSON'},
   });
