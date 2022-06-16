@@ -1,7 +1,6 @@
 body {
-  background-color: #EFDDC9;
+  background-color: #96FBC7;
 }
-
 main {
   width:100%;
   margin: 50px auto;
@@ -10,97 +9,243 @@ main {
   /* its 100% of the view port minus the box of the footer and the box of the header */
   min-height: calc(100vh -62px - 51px );
 }
-
 header {
+  background-color: #74569B;
+  color: #FFB3CB;
+  width: 100%;
+}
+.navbar-brand {
+  float: left;
+  font-size: 150px;
+  font-weight: 600;
+  color: #FFB3CB;
+  display: block;
+}
+.nav-item {
+  float: none;
   text-align: center;
-  background-color: #7CB9AD;
-  color: #404674;
+  display: inline block;
+  color: #FFB3CB;
+  font-weight: 600;
 }
-
-/* Style the container with a rounded border, grey background and some padding and margin */
-.container {
-  border: 2px solid #ccc;
-  background-color: #eee;
-  border-radius: 5px;
-  padding: 16px;
-  margin: 16px 0;
-}
-
 /* Clear floats after containers */
 .container::after {
   content: "";
   clear: both;
   display: table;
 }
-
 /* Float images inside the container to the left. Add a right margin, and style the image as a circle */
 .container img {
-  float: left;
+  float: center;
   margin-right: 20px;
   border-radius: 50%;
 }
-
 /* Increase the font-size of a span element */
 .container span {
   font-size: 20px;
   margin-right: 15px;
 }
-
 /* Add media queries for responsiveness. This will center both the text and the image inside the container */
 @media (max-width: 500px) {
   .container {
     text-align: center;
   }
-
   .container img {
     margin: auto;
     float: none;
     display: block;
   }
 }
-
-
 footer {
   text-align: center;
-  background-color: #7CB9AD;
-  color: #404674;
+  background-color: #74569B;
+  border-radius: 5px;
+  color: #F7FFAE;
 }
-
 body, html {
   height: 100%;
 }
-
 .parallax {
   /* The image used */
   background-image: url("img_parallax.jpg");
-
   /* Full height */
   height: 100%;
-
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 /* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
 @media only screen and (max-device-width: 1366px) {
   .parallax {
     background-attachment: scroll;
   }
 }
-
 /* Float to the right on screens that are equal to or less than 768px wide */
 @media (max-width: 768px) {
   .float-right-sm {
     float: right;
   }
 }
-
 /* Float to the right on screens that are equal to or greater than 769px wide */
 @media (min-width: 769px) {
   .float-right-lg {
     float: right;
   }
-} 
+}
+/* Style the container with a rounded border, grey background and some padding and margin */
+.container {
+  border: 5px solid #96FBC7;
+  background-color: #74569B;
+  border-radius: 5px;
+  padding: 16px;
+  margin: 16px 0;
+  color: #FFB3CB;
+  font-weight: 600;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  display: inline-block;
+}
+/*searchbox*/
+.search-box {
+  text-align: center;
+  display: inline-block;
+}
+.input-box {
+  display: inline-block;
+}
+li {
+  padding: 10px;
+  margin-left: 10px;
+  text-decoration: none;
+  margin-inline-start: auto;
+}
+ul {
+  display: flex;
+  list-style: none;
+}body {
+  background-color: #96FBC7;
+}
+main {
+  width:100%;
+  margin: 50px auto;
+  text-align: center;
+  /* this will keep the footer at the bottom of the page */
+  /* its 100% of the view port minus the box of the footer and the box of the header */
+  min-height: calc(100vh -62px - 51px );
+}
+header {
+  background-color: #74569B;
+  color: #FFB3CB;
+  width: 100%;
+}
+.navbar-brand {
+  float: left;
+  font-size: 150px;
+  font-weight: 600;
+  color: #FFB3CB;
+  display: block;
+}
+.nav-item {
+  float: none;
+  text-align: center;
+  display: inline block;
+  color: #FFB3CB;
+  font-weight: 600;
+}
+/* Clear floats after containers */
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+/* Float images inside the container to the left. Add a right margin, and style the image as a circle */
+.container img {
+  float: center;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+/* Increase the font-size of a span element */
+.container span {
+  font-size: 20px;
+  margin-right: 15px;
+}
+/* Add media queries for responsiveness. This will center both the text and the image inside the container */
+@media (max-width: 500px) {
+  .container {
+    text-align: center;
+  }
+  .container img {
+    margin: auto;
+    float: none;
+    display: block;
+  }
+}
+footer {
+  text-align: center;
+  background-color: #74569B;
+  border-radius: 5px;
+  color: #F7FFAE;
+}
+body, html {
+  height: 100%;
+}
+.parallax {
+  /* The image used */
+  background-image: url("img_parallax.jpg");
+  /* Full height */
+  height: 100%;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* Turn off parallax scrolling for all tablets and phones. Increase/decrease the pixels if needed */
+@media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
+/* Float to the right on screens that are equal to or less than 768px wide */
+@media (max-width: 768px) {
+  .float-right-sm {
+    float: right;
+  }
+}
+/* Float to the right on screens that are equal to or greater than 769px wide */
+@media (min-width: 769px) {
+  .float-right-lg {
+    float: right;
+  }
+}
+/* Style the container with a rounded border, grey background and some padding and margin */
+.container {
+  border: 5px solid #96FBC7;
+  background-color: #74569B;
+  border-radius: 5px;
+  padding: 16px;
+  margin: 16px 0;
+  color: #FFB3CB;
+  font-weight: 600;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  display: inline-block;
+}
+/*searchbox*/
+.search-box {
+  text-align: center;
+  display: inline-block;
+}
+.input-box {
+  display: inline-block;
+}
+li {
+  padding: 10px;
+  margin-left: 10px;
+  text-decoration: none;
+  margin-inline-start: auto;
+}
+ul {
+  display: flex;
+  list-style: none;
+}

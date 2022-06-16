@@ -22,7 +22,7 @@ router.get("/", withAuth, async (req, res) => {
 });
 
 router.get("/new-post", withAuth, (req, res) => {
-  res.render("create-blog")
+  res.render("new-post")
 });
 
 router.get("/edit/:id", withAuth, async (req, res) => {
