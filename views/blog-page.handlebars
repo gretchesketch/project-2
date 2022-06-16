@@ -4,31 +4,24 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <title>DOOD</title>
-    <link rel="stylesheet" href="C:\Users\gretc\Documents\GATechHW\project-2\public\css\style.css"/>
-    <link
+    <link rel="stylesheet" href="public\css\style.css"/>
+    {{!-- <link
       href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css'
       rel='stylesheet'
       integrity='sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor'
       crossorigin='anonymous'
-    />
+    /> --}}
   </head>
 
 
-<div class='row'>
-  <div class='card'>
-    <div class='card-header'>{{blog.title}}</div>
-    <div class='card-body'>
-      <p class='card-text'>
-        {{blog.content}}
-      </p>
-    </div>
-    <div class='card-footer text-muted'>
-      Posted by
-      {{blog.user.username}}
-      on
+<div class="container">
+  <img src="bandmember.jpg" alt="Avatar" style="width:90px">
+  <p><span>{{blog.videogame}}</span>{{blog.user.username}}</p>
+  <p>{{blog.content}}</p>
+  <div class='card-footer text-muted'>
+      Posted on:
       {{blog.createdAt}}
     </div>
-  </div>
 </div>
 
 <div class='row'>
