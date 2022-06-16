@@ -1,5 +1,6 @@
 const newPostHandler = async (evt)=> {
   evt.preventDefault();
+const image = document.querySelector('#create-post-image').value;
   const videogame = document.querySelector('#create-post-videogame').value;
   const console = document.querySelector('#create-post-console').value;
   const content = document.querySelector('#create-post-content').value;

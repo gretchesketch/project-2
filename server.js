@@ -4,6 +4,20 @@ const session = require('express-session');
 const exphbs = require('express-handlebars');
 const controllers = require('./controllers');
 const helpers = require('./utils/helpers');
+const multer = require('multer');
+
+const storage = multer.diskStorage({
+  destination: function(req, file, callback) {
+    callback(null, 'images');
+  },
+  filename: function (req, file, callback) {
+    callback(null, Date.now() + path.extname(file.originalname))
+  }
+});
+
+const upload = multer({
+  storage: storage
+});
 
 const sequelize = require('./config/connection');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
@@ -38,6 +52,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(controllers);
 
+app.get("/create-blog", (req, res) => {
+  res.render("create-blog")
+});
+
+app.post("/create-blog", upload.single("image"), (req, res) => {
+  res.send("Image Uploaded")
+});
 
 // app.get('/search/:name', (request, response) => {
 //     const { name } = request.params;

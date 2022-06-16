@@ -1,10 +1,10 @@
 <div class='row'>
-  <form id='create-post-form'>
+  <form id='create-post-form' method="POST" action="/create-blog" enctype="multipart/form-data">
+    <input id="create-post-image" type="file" name="image">
     <input id='create-post-videogame' placeholder="Video Game Title:" type='text' />
     <input id='create-post-console' placeholder="Console Type:" type='text' />
     <textarea id='create-post-content' placeholder="Write review here!"></textarea>
     <button id='create-post-save-button'>Save Post</button>
   </form>
 </div>
-
 <script src='/js/post.js'></script>
