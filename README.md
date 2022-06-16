@@ -19,7 +19,7 @@ Table of Contents
 
  * Live URL: https://glacial-badlands-86135.herokuapp.com/
 
- * Repo URL: https://github.com/gretchesketch/tech-blog
+ * Repo URL: https://github.com/gretchesketch/project-2
 
 
 
