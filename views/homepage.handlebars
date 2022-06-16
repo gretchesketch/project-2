@@ -1,17 +1,13 @@
 {{#each posts as |blog|}}
-<div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="..." alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">{{blog.videogame}}</h5>
-    <h6 class="card-subtitle mb-2 text-muted">{{blog.console}}</h6>
-    <p class="card-text">{{blog.content}}</p>
-    <a href='/blogs/{{id}}' class='btn btn-primary'>View Full Blog</a>
-  </div>
+<div class="container">
+  <img src="bandmember.jpg" alt="Avatar" style="width:90px">
+  <p><span>{{blog.videogame}}</span>{{blog.user.username}}</p>
+  <p>{{blog.console}}</p>
+  <p>{{blog.content}}</p>
   <div class='card-footer text-muted'>
-    Posted by
-    {{blog.user.username}}
-    on
-    {{blog.createdAt}}
+      Posted on:
+      {{blog.createdAt}}
+    <a href='/blogs/{{id}}' class='btn btn-primary'>View Full Blog</a>
   </div>
 </div>
 {{/each}}

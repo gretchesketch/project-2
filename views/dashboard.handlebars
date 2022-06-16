@@ -4,43 +4,25 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <title>DOOD</title>
-    <link rel="stylesheet" href="C:\Users\gretc\Documents\GATechHW\project-2\public\css\style.css"/>
-    <link
+    <link rel="stylesheet" href="css/style.css"/>
+    {{!-- <link
       href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css'
       rel='stylesheet'
       integrity='sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor'
       crossorigin='anonymous'
-    />
+    /> --}}
   </head>
 
 {{#if posts}}
   {{#each posts as |post|}}
-  <div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="..." alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">{{post.videogame}}</h5>
-    <h6 class="card-subtitle mb-2 text-muted">{{post.console}}</h6>
-    <p class="card-text">{{post.content}}</p>
-  </div>
-  <div class='card-footer text-muted'>
-          <a href='/edit-blog/{{post.id}}'>Edit Blog</a>
-          <button id='delete-post-button' data-postId={{post.id}} >Delete Post</button>
-  </div>
+ <div class="container">
+  <img src="bandmember.jpg" alt="Avatar" style="width:90px">
+  <p><span>{{post.videogame}}</span></p>
+  <p class="card-subtitle mb-2 text-muted">{{post.console}}</p>
+  <p>{{post.content}}</p>
+  <p>Posted on:
+      {{post.createdAt}}</p>
 </div>
-    {{!-- <div class='row'>
-      <div class='card'>
-        <div class='card-header'>{{post.videogame}}{{post.console}}</div>
-        <div class='card-body'>
-          <p class='card-text'>
-            {{post.content}}
-          </p>
-        </div>
-        <div class='card-footer text-muted'>
-          <a href='/edit-blog/{{post.id}}'>Edit Blog</a>
-          <button id='delete-post-button' data-postId={{post.id}} >Delete Post</button>
-        </div>
-      </div>
-    </div> --}}
   {{/each}}
 {{/if}}
 
