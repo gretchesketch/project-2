@@ -1,23 +1,32 @@
-{{#if Posts}}
-  {{#each Posts as |post|}}
-    <div class='row'>
-      <div class='card'>
-        <div class='card-header'>{{post.title}}</div>
-        <div class='card-body'>
-          <p class='card-text'>
-            {{blog.content}}
-          </p>
-          <a href='/blogpage.html' class='btn btn-primary'>Go somewhere</a>
-        </div>
-        <div class='card-footer text-muted'>
-          <a href='/edit-blog'>Edit Blog</a>
-          <button id='delete-post-button'>Delete Post</button>
-        </div>
-      </div>
-    </div>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>DOOD</title>
+   <link rel="stylesheet" href="css/style.css"/>
+    {{!-- <link
+      href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css'
+      rel='stylesheet'
+      integrity='sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor'
+      crossorigin='anonymous'
+    /> --}}
+  </head>
+
+{{#if posts}}
+  {{#each posts as |post|}}
+   <div class="container">
+  <img src="bandmember.jpg" alt="Avatar" style="width:90px">
+  <p><span>{{post.videogame}}</span></p>
+  <p class="card-subtitle mb-2 text-muted">{{post.console}}</p>
+  <p>{{post.content}}</p>
+  <p>Posted on:
+      {{post.createdAt}}</p>
+</div>
   {{/each}}
 {{/if}}
 
 <div class='row'>
-  <a id='add-post-link' href='/create-blog'>Add Post</a>
+  <a id='add-post-link' href='/dashboard/new-post'>Add Post</a>
 </div>
+<script src="/js/edit-post.js"></script>

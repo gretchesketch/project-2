@@ -1,79 +1,56 @@
-const path = require("path");
+const path = require('path');
 const express = require('express');
+const session = require('express-session');
+const exphbs = require('express-handlebars');
+const controllers = require('./controllers');
+const helpers = require('./utils/helpers');
+
+const sequelize = require('./config/connection');
+const SequelizeStore = require('connect-session-sequelize')(session.Store);
+
 const app = express();
-const cors = require('cors');
-const dotenv = require('dotenv');
-dotenv.config();
+const PORT = process.env.PORT || 3001;
 
-const PORT = process.env.PORT || 5000
+// Set up Handlebars.js engine with custom helpers
+const hbs = exphbs.create({ helpers });
 
-app.use(express.static(path.join(__dirname, 'public')));
+const sess = {
+  secret: 'Super secret secret',
+  cookie: {
+    maxAge: 6000000,
+  },
+  resave: false,
+  saveUninitialized: true,
+  store: new SequelizeStore({
+    db: sequelize
+  })
+};
 
-const connection = require('./config/connection');
+app.use(session(sess));
 
-app.use(cors());
+// Inform Express.js on which template engine to use
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
+
 app.use(express.json());
-app.use(express.urlencoded({ extended : false }));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, '/public')));
+
+app.use(controllers);
 
 
-// create
-app.post('/insert', (request, response) => {
-    const { name } = request.body;
-    const db = dbService.getDbServiceInstance();
-    
-    const result = db.insertNewName(name);
+// app.get('/search/:name', (request, response) => {
+//     const { name } = request.params;
+//     const db = dbService.getDbServiceInstance();
 
-    result
-    .then(data => response.json({ data: data}))
-    .catch(err => console.log(err));
+//     const result = db.searchByName(name);
+//     result
+//     .then(data => response.json({data : data}))
+//     .catch(err => console.log(err));
+// })
+
+sequelize.sync({ force: false }).then(() => {
+  app.listen(PORT, () => console.log('Now listening'));
 });
 
-// read
-app.get('/getAll', (request, response) => {
-    const db = dbService.getDbServiceInstance();
-
-    const result = db.getAllData();
-    
-    result
-    .then(data => response.json({data : data}))
-    .catch(err => console.log(err));
-})
-
-// update
-app.patch('/update', (request, response) => {
-    const { id, name } = request.body;
-    const db = dbService.getDbServiceInstance();
-
-    const result = db.updateNameById(id, name);
-    
-    result
-    .then(data => response.json({success : data}))
-    .catch(err => console.log(err));
-});
-
-// delete
-app.delete('/delete/:id', (request, response) => {
-    const { id } = request.params;
-    const db = dbService.getDbServiceInstance();
-
-    const result = db.deleteRowById(id);
-    
-    result
-    .then(data => response.json({success : data}))
-    .catch(err => console.log(err));
-});
-
-app.get('/search/:name', (request, response) => {
-    const { name } = request.params;
-    const db = dbService.getDbServiceInstance();
-
-    const result = db.searchByName(name);
-    
-    result
-    .then(data => response.json({data : data}))
-    .catch(err => console.log(err));
-})
-connection.sync()
-.then(() => {
-    app.listen(PORT, () => console.log('app is running'));
-})
+// app.listen(PORT, () => console.log('Now listening'));
