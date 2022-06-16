@@ -4,20 +4,14 @@
   <meta charset='UTF-8' />
   <meta http-equiv='X-UA-Compatible' content='IE=edge' />
   <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-  
   <!--Boxicons Link-->
   <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="stylesheet" href="./css/style.css">
   <title>DOOD</title>
-   {{#each css}}
+  {{#each css}}
         <link rel="stylesheet" href="public\css\style.css"{{style.css}}>
     {{/each}}
-  {{!-- <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css' rel='stylesheet'
-    integrity='sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor' crossorigin='anonymous' /> --}}
-  
-  
-  
 </head>
+
 <body>
   <header>
     <nav class='navbar navbar-expand-lg bg-light'>
@@ -35,13 +29,6 @@
             <li class='nav-item'>
               <a class='nav-link' href='/dashboard'>Profile</a>
             </li>
-            <li class='nav-item'>
-              <a class='nav-link' href='#'>About Us</a>
-            </li>
-            <li class='nav-item'>
-              <a class='nav-link' href='#'>Contact Us</a>
-            </li>
-            
             {{#if logged_in}}
             <li class='nav-item'>
               <a class='nav-link logout' id="logout" href='/'>Logout</a>
@@ -51,7 +38,7 @@
               <a class='nav-link' href='/login'>Login</a>
             </li>
             {{/if}}
-            {{!-- <li>
+            <li>
                 <a href="#">Placeholder</a>
                 <i class='bx bxs-chevrons-down arrow placeholder2'></i>
                 <ul class="placeholder2-sub-menu sub-menu">
@@ -59,7 +46,9 @@
                 <li><a href="#">placeholder</a></li>
                 <li><a href="#">placeholder</a></li>
                 </ul>
-            </li> --}}
+            </li>
+            <li><a href="#">ABOUT US</a></li>
+            <li><a href="#">CONTACT US</a></li>
           </ul>
         </div>
         <!--Search Box-->
