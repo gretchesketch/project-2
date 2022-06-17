@@ -27,7 +27,6 @@ header {
   display: inline block;
   color: #FFB3CB;
   font-weight: 600;
-  font-family: ;
 }
 /* Clear floats after containers */
 .container::after {
@@ -153,7 +152,6 @@ header {
   display: inline block;
   color: #FFB3CB;
   font-weight: 600;
-  font-family: ;
 }
 /* Clear floats after containers */
 .container::after {

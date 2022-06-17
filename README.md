@@ -17,9 +17,9 @@ Table of Contents
 
     
 
- * Live URL: 
+ * Live URL: https://glacial-badlands-86135.herokuapp.com/
 
- * Repo URL: https://github.com/gretchesketch/tech-blog
+ * Repo URL: https://github.com/gretchesketch/project-2
 
 
 
@@ -33,10 +33,10 @@ This project used the following:
  * Node.js
  * express
  * dotenv
+ * bcrypt
  * handlebars
  * mysql2
  * sequelize
- * cors
  * session
  * npm install multer express morgan --save
  * schemecolor.com: retro gamer
@@ -51,7 +51,7 @@ Dependencies
  * handlebars
  * mysql2
  * sequelize
- * uuid
+ * bcrypt
  * session
  * multer
 
@@ -84,6 +84,6 @@ Dependencies
 
 
 
- <!-- ![img](assets\team-generator_nodePrompt_screenShot.jpg "node prompt image")
- ![img](assets\team-generator_GeneratedLivePage_screenShot.jpg "generated live page image")
- ![img](assets\team-generator_runAndPassTests_screenShot.jpg "running tests image") -->
+ ![img](images\home.jpg"landing page for dood")
+ ![img](images\login.jpg "login and sighn up page")
+ ![img](images\profile.jpg "profile page for user with user writen posts")

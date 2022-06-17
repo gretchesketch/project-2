@@ -14,7 +14,7 @@ router.get("/", withAuth, async (req, res) => {
       where: { userId: req.session.user_id },
     });
     const posts = postsData.map((post) => post.get({ plain: true }));
-    res.render("dashboard", {posts});
+    res.render("search", {posts});
   } catch (err) {
     console.log(err)
     res.status(500).json(err)
@@ -22,22 +22,21 @@ router.get("/", withAuth, async (req, res) => {
 });
 
 router.get("/new-post", withAuth, (req, res) => {
-  res.render("new-post")
+  res.render("create-blog")
 });
 
-router.get("/edit/:id", withAuth, async (req, res) => {
-  try {
-    const postData = await Post.findByPk(req.params.id)
-    if (postData) {
-      const post = postData.get({plain: true});
-      res.render("edit-post", {post})
-    } else {
-      res.status(404).end()
-    }
-  } catch (err) {
-    res.redirect("login")
-  }
-})
+// router.get("/edit/:id", withAuth, async (req, res) => {
+//   try {
+//     const postData = await Post.findByPk(req.params.id)
+//     if (postData) {
+//       const post = postData.get({plain: true});
+//       res.render("edit-post", {post})
+//     } else {
+//       res.status(404).end()
+//     }
+//   } catch (err) {
+//     res.redirect("login")
+//   }
+// })
 
 module.exports = router;
-
