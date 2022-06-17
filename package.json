@@ -35,6 +35,8 @@
     "mysql2": "^2.3.3",
     "node": "^17.7.2",
     "nodemon": "^2.0.16",
+    "passport": "^0.6.0",
+    "passport-facebook": "^3.0.0",
     "sequelize": "^6.20.1"
   }
 }
