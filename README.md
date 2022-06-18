@@ -84,6 +84,6 @@ Dependencies
 
 
 
- ![img](images\home.jpg"landing page for dood")
- ![img](images\login.jpg "login and sighn up page")
- ![img](images\profile.jpg "profile page for user with user writen posts")
+ ![img](images/home.jpg"landing page for dood")
+ ![img](images/login.jpg "login and sighn up page")
+ ![img](images/profile.jpg "profile page for user with user writen posts")
